@@ -5,18 +5,18 @@ let expDate = localStorage.getItem("expDate") || null;
 if (expDate) expDateInput.value = expDate;
 
 const cards = [
-  { id: 1, text: "Cena romántica" },
-  { id: 1, text: "Cena romántica" },
-  { id: 2, text: "Paseo sorpresa" },
-  { id: 2, text: "Paseo sorpresa" },
-  { id: 3, text: "Una petición o deseo" },
-  { id: 3, text: "Una petición o deseo" },
-  { id: 4, text: "Masaje relajante" },
-  { id: 4, text: "Masaje relajante" },
-  { id: 5, text: "Te ganaste una confesión mía" },
-  { id: 5, text: "Te ganaste una confesión mía" },
-  { id: 6, text: "Te cocino lo que tu quieras" },
-  { id: 6, text: "Te cocino lo que tu quieras" },
+  { id: 1, text: "Cena romántica", image: "url_de_la_imagen_cena.jpg" },
+  { id: 1, text: "Cena romántica", image: "url_de_la_imagen_cena.jpg" },
+  { id: 2, text: "Paseo sorpresa", image: "url_de_la_imagen_paseo.jpg" },
+  { id: 2, text: "Paseo sorpresa", image: "url_de_la_imagen_paseo.jpg" },
+  { id: 3, text: "Una petición o deseo", image: "url_de_la_imagen_deseo.jpg" },
+  { id: 3, text: "Una petición o deseo", image: "url_de_la_imagen_deseo.jpg" },
+  { id: 4, text: "Masaje relajante", image: "url_de_la_imagen_masaje.jpg" },
+  { id: 4, text: "Masaje relajante", image: "url_de_la_imagen_masaje.jpg" },
+  { id: 5, text: "Te ganaste una confesión mía", image: "url_de_la_imagen_confesion.jpg" },
+  { id: 5, text: "Te ganaste una confesión mía", image: "url_de_la_imagen_confesion.jpg" },
+  { id: 6, text: "Te cocino lo que tu quieras", image: "url_de_la_imagen_cocina.jpg" },
+  { id: 6, text: "Te cocino lo que tu quieras", image: "url_de_la_imagen_cocina.jpg" },
 ];
 
 let shuffledCards = [...cards].sort(() => 0.5 - Math.random());
@@ -30,6 +30,7 @@ function createBoard() {
     div.classList.add("card");
     div.dataset.id = card.id;
     div.dataset.text = card.text;
+    div.dataset.image = card.image; // Guardamos la URL de la imagen
     div.onclick = () => flipCard(div);
     gameBoard.appendChild(div);
   });
@@ -46,7 +47,6 @@ function flipCard(card) {
   }
 }
 
-// Modificar la función checkMatch para agregar efectos
 function checkMatch() {
   if (selectedCards[0].dataset.id === selectedCards[1].dataset.id) {
     selectedCards.forEach((card) => {
@@ -62,7 +62,10 @@ function checkMatch() {
         }, i * 100);
       }
     });
-    saveCoupon(selectedCards[0].dataset.text);
+    const couponText = selectedCards[0].dataset.text;
+    const couponImage = selectedCards[0].dataset.image; // Obtenemos la URL de la imagen
+    saveCoupon(couponText);
+    showCouponCard(couponText, couponImage); // Pasamos la URL de la imagen a showCouponCard
     matchedPairs++;
 
     if (matchedPairs === cards.length / 2) {
@@ -103,23 +106,56 @@ function setExpiration() {
   alert("Fecha de vencimiento guardada: " + expDate);
 }
 
+// Modificamos la función showCouponCard para incluir la imagen y el botón
+function showCouponCard(couponText, couponImage) {
+  const couponCard = document.createElement("div");
+  couponCard.classList.add("coupon-card");
+  couponCard.innerHTML = `
+      <h3>¡Felicidades!</h3>
+      <img src="${couponImage}" alt="Cupón" class="coupon-image">
+      <p>¡Has ganado este cupón!</p>
+      <h4>${couponText}</h4>
+      <button id="acceptCoupon">Aceptar</button>
+  `;
+
+  couponCard.style.position = "fixed";
+  couponCard.style.top = "50%";
+  couponCard.style.left = "50%";
+  couponCard.style.transform = "translate(-50%, -50%)";
+  couponCard.style.background = "white";
+  couponCard.style.padding = "20px";
+  couponCard.style.borderRadius = "10px";
+  couponCard.style.boxShadow = "0 5px 15px rgba(0,0,0,0.3)";
+  couponCard.style.zIndex = "1000";
+
+  document.body.appendChild(couponCard);
+
+  // Agregamos el evento al botón "Aceptar"
+  const acceptButton = document.getElementById("acceptCoupon");
+  acceptButton.onclick = () => {
+    couponCard.remove();
+  };
+}
+
 createBoard();
 
 // Agregar esto al final de memory.js
 function createFloatingHeart(x, y) {
-  const heart = document.createElement("div");
-  heart.innerHTML = "♥";
-  heart.style.position = "fixed";
-  heart.style.left = x + "px";
-  heart.style.top = y + "px";
-  heart.style.color = "var(--primary-color)";
-  heart.style.pointerEvents = "none";
-  heart.style.animation = "floatingHearts 1s forwards";
-  document.body.appendChild(heart);
-
-  setTimeout(() => heart.remove(), 1000);
-}
+    const heart = document.createElement("div");
+    heart.innerHTML = "♥";
+    heart.style.position = "fixed";
+    heart.style.left = x + "px";
+    heart.style.top = y + "px";
+    heart.style.color = "#672610"; /* ¡Cambiamos el color aquí! */
+    heart.style.pointerEvents = "none";
+    heart.style.animation = "floatingHearts 1s forwards";
+    document.body.appendChild(heart);
+  
+    setTimeout(() => heart.remove(), 3000);
+  }
+  
 
 document.addEventListener("click", (e) => {
   createFloatingHeart(e.clientX, e.clientY);
 });
+    

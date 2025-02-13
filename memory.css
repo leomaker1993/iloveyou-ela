@@ -1,12 +1,13 @@
 :root {
-    --primary-color: #ff6b95;
-    --secondary-color: #ff8fab;
-    --accent-color: #ffc2d1;
-    --text-color: #2c3e50;
-    --background-color: #fff5f7;
+    --primary-color: #FF6B6B; /* Rojo coral */
+    --secondary-color: #74b6f7cc;
+    --accent-color: #74b6f7cc; /* Amarillo */
+    --text-color: #343A40; /* Gris oscuro */
+    --background-color: #F8F9FA; /* Gris claro */
 }
 
 body {
+    
     font-family: 'Quicksand', sans-serif;
     background-image: radial-gradient(circle at 10% 20%, rgba(255,107,149,0.8) 0%, rgba(116,182,247,0.8) 90%);
     min-height: 100vh;
@@ -72,6 +73,7 @@ button:hover {
     margin: 20px 0;
 }
 
+/* Estilos generales (ya los tenías) */
 .card {
     aspect-ratio: 1;
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
@@ -79,13 +81,23 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Tamaño original */
     cursor: pointer;
     color: white;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.)
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 5px; /* Añadimos un poco de padding para que el texto no toque los bordes */
+    text-align: center; /* Centramos el texto horizontalmente */
 }
+
+/* Media query para pantallas más pequeñas (móviles) */
+@media (max-width: 600px) {
+    .card {
+        font-size: 0.7rem; /* Reducimos el tamaño del texto */
+    }
+}
+
 
 .coupon-card {
     position: fixed;
@@ -96,8 +108,10 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 1000; /* Asegura que esté por encima de todo */
+    z-index: 1000;
     text-align: center;
+    width: 80%; /* Ajuste para móviles */
+    max-width: 400px; /* Ancho máximo para que no se vea demasiado grande en tablets */
 }
 
 .coupon-card h3 {
@@ -114,4 +128,53 @@ button:hover {
     color: var(--secondary-color);
     font-size: 1.2rem;
     margin-top: 15px;
+}
+
+/* Estilo para la imagen */
+.coupon-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Estilo para el botón "Aceptar" */
+#acceptCoupon {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+#acceptCoupon:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+
+
+/* Estilos para el botón "Volver a la Historia" */
+.back-button {
+    display: inline-block; /* Para poder aplicar padding y márgenes */
+    padding: 10px 20px;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--text-color);
+    text-decoration: none; /* Quitamos el subrayado predeterminado de los enlaces */
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background: #f2b3c2; /* Un tono más claro del accent color */
+    transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el ratón */
 }
