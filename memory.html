@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria - Cupones</title>
+    <link rel="stylesheet" href="memory.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de Memoria - Gana Cupones</h1>
+        
+        <div class="date-container">
+            <label for="expDate">Fecha de vencimiento:</label>
+            <input type="date" id="expDate">
+            <button onclick="setExpiration()">Guardar Fecha</button>
+        </div>
+        
+        <div class="game-board" id="gameBoard"></div>
+
+        <a href="index.html" class="back-button">Volver a la Historia</a>
+    </div>
+
+    <script src="memory.js"></script>
+</body>
+</html>

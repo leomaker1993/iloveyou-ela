@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #ff6b95;
+    --secondary-color: #ff8fab;
+    --accent-color: #ffc2d1;
+    --text-color: #2c3e50;
+    --background-color: #fff5f7;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-image: radial-gradient(circle at 10% 20%, rgba(255,107,149,0.8) 0%, rgba(116,182,247,0.8) 90%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.date-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="date"] {
+    padding: 8px 15px;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    margin: 0 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+button {
+    padding: 8px 20px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.card {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.
