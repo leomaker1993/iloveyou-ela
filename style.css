@@ -2,6 +2,7 @@
 /*https://bytewebster.com/*/
 /*https://bytewebster.com/*/
 
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
 
 * {
@@ -103,81 +104,101 @@ section {
   margin-right: 7px;
 }
 
+/*
+https://i.ibb.co/hpzrYkt/Screenshot-20250213-004513-Instagram-1.jpg
+https://i.ibb.co/BHthfDYF/Screenshot-20250213-004515-Instagram-1.jpg
+https://i.ibb.co/KxtSskBV/Screenshot-20250213-004524-Instagram-1.jpg
+https://i.ibb.co/bMTqYnbt/Screenshot-20250213-004522-Instagram-1.jpg
+https://i.ibb.co/WTGR6MQ/Screenshot-20250213-163250-Instagram-1.jpg
+
+https://i.ibb.co/k2LfQR9t/Screenshot-20250213-004532-Instagram.jpg
+https://i.ibb.co/NdsNTtq8/Screenshot-20250213-163339-Instagram-1.jpg
+https://i.ibb.co/3Lv3Z0t/Screenshot-20250213-163304-Instagram-1.jpg
+https://i.ibb.co/1G7hgL33/Screenshot-20250213-163452-Instagram-1.jpg
+https://i.ibb.co/TDc2Q2wR/Screenshot-20250213-163352-Instagram-1.jpg
+
+https://i.ibb.co/7PpKDY4/Screenshot-20250213-163533-Instagram-1.jpg
+https://i.ibb.co/d0G92RjD/Screenshot-20250213-163509-Instagram-1.jpg
+https://i.ibb.co/j9Vm4CsQ/Screenshot-20250213-163612-Instagram-1.jpg
+https://i.ibb.co/4nC016bc/Screenshot-20250213-163601-Instagram-1.jpg
+https://i.ibb.co/WvT2mPJR/Screenshot-20250213-163628-Instagram-1.jpg
+*/
+
 .swiper-slide--one {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/BK444QZk/Screenshot-20250213-004515-Instagram-1.jpg")
+    url("https://i.ibb.co/hpzrYkt/Screenshot-20250213-004513-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--two {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/rh07Jxp/Screenshot-20250213-004522-Instagram-1.jpg")
+    url("https://i.ibb.co/BHthfDYF/Screenshot-20250213-004515-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--three {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/Hfv3WWcZ/Screenshot-20250213-004524-Instagram-1.jpg")
+    url("https://i.ibb.co/KxtSskBV/Screenshot-20250213-004524-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--four {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/4RZdhGVT/Screenshot-20250213-163250-Instagram-1.jpg")
+    url("https://i.ibb.co/bMTqYnbt/Screenshot-20250213-004522-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--five {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/x8tfbVXf/Screenshot-20250213-163304-Instagram-1.jpg")
+    url("https://i.ibb.co/WTGR6MQ/Screenshot-20250213-163250-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--six {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/WvWsWMjv/Screenshot-20250213-163339-Instagram-1.jpg")
+    url("https://i.ibb.co/k2LfQR9t/Screenshot-20250213-004532-Instagram.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--seven {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/LDWYF4GN/Screenshot-20250213-163352-Instagram-1.jpg")
+    url("https://i.ibb.co/NdsNTtq8/Screenshot-20250213-163339-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--eight {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/h1gTYzFS/Screenshot-20250213-163452-Instagram-1.jpg")
+    url("https://i.ibb.co/3Lv3Z0t/Screenshot-20250213-163304-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--nine {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/CKXxMcjh/Screenshot-20250213-163509-Instagram-1.jpg")
+    url("https://i.ibb.co/1G7hgL33/Screenshot-20250213-163452-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--ten {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/vvQZxsd8/Screenshot-20250213-163533-Instagram-1.jpg")
+    url("https://i.ibb.co/TDc2Q2wR/Screenshot-20250213-163352-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--eleven {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/cSnL3y7g/Screenshot-20250213-163601-Instagram-1.jpg")
+    url("https://i.ibb.co/7PpKDY4/Screenshot-20250213-163533-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--twelve {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/sB9mFJV/Screenshot-20250213-163612-Instagram-1.jpg")
+    url("https://i.ibb.co/d0G92RjD/Screenshot-20250213-163509-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--thirdteen {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("https://i.ibb.co/8DLMnLgG/Screenshot-20250213-163628-Instagram-1.jpg")
+    url("https://i.ibb.co/j9Vm4CsQ/Screenshot-20250213-163612-Instagram-1.jpg")
       no-repeat 50% 50% / cover;
 }
 
@@ -188,20 +209,7 @@ section {
 
 
 /* ... Mantener todos los estilos anteriores ... 
-https://i.ibb.co/BK444QZk/Screenshot-20250213-004515-Instagram-1.jpg
-https://i.ibb.co/rh07Jxp/Screenshot-20250213-004522-Instagram-1.jpg
-https://i.ibb.co/Hfv3WWcZ/Screenshot-20250213-004524-Instagram-1.jpg
-https://i.ibb.co/4RZdhGVT/Screenshot-20250213-163250-Instagram-1.jpg
-https://i.ibb.co/x8tfbVXf/Screenshot-20250213-163304-Instagram-1.jpg
 
-https://i.ibb.co/WvWsWMjv/Screenshot-20250213-163339-Instagram-1.jpg
-https://i.ibb.co/LDWYF4GN/Screenshot-20250213-163352-Instagram-1.jpg
-https://i.ibb.co/h1gTYzFS/Screenshot-20250213-163452-Instagram-1.jpg
-https://i.ibb.co/CKXxMcjh/Screenshot-20250213-163509-Instagram-1.jpg
-https://i.ibb.co/vvQZxsd8/Screenshot-20250213-163533-Instagram-1.jpg
-https://i.ibb.co/cSnL3y7g/Screenshot-20250213-163601-Instagram-1.jpg
-https://i.ibb.co/sB9mFJV/Screenshot-20250213-163612-Instagram-1.jpg
-https://i.ibb.co/8DLMnLgG/Screenshot-20250213-163628-Instagram-1.jpg
 
 */
 
