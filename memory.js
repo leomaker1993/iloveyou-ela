@@ -5,8 +5,8 @@ let expDate = localStorage.getItem("expDate") || null;
 if (expDate) expDateInput.value = expDate;
 
 const cards = [
-  { id: 1, text: "Cena romántica", image: "url_de_la_imagen_cena.jpg" },
-  { id: 1, text: "Cena romántica", image: "url_de_la_imagen_cena.jpg" },
+  { id: 1, text: "Cena romántica y Baile", image: "url_de_la_imagen_cena.jpg" },
+  { id: 1, text: "Cena romántica y Baile", image: "url_de_la_imagen_cena.jpg" },
   { id: 2, text: "Paseo sorpresa", image: "url_de_la_imagen_paseo.jpg" },
   { id: 2, text: "Paseo sorpresa", image: "url_de_la_imagen_paseo.jpg" },
   { id: 3, text: "Una petición o deseo", image: "url_de_la_imagen_deseo.jpg" },
