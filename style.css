@@ -214,6 +214,14 @@ https://i.ibb.co/WvT2mPJR/Screenshot-20250213-163628-Instagram-1.jpg
       no-repeat 50% 50% / cover;
 }
 
+
+.swiper-slide--fourteen {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("https://i.ibb.co/WvT2mPJR/Screenshot-20250213-163628-Instagram-1.jpg")
+      no-repeat 50% 50% / cover;
+}
+
+
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right {
   background-image: none;
