@@ -104,39 +104,53 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: #ffffff; /* Fondo blanco */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    text-align: center;
     width: 80%; /* Ajuste para móviles */
-    max-width: 400px; /* Ancho máximo para que no se vea demasiado grande en tablets */
+    max-width: 400px; /* Ancho máximo */
+    border: 2px dashed var(--primary-color); /* Borde con estilo */
+    text-align: center; /* Centra todo el texto dentro de la card */
 }
 
-.coupon-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
+.coupon-title {
+    color: var(--primary-color); /* Color del encabezado */
 }
 
-.coupon-card p {
-    font-size: 1rem;
-    color: var(--text-color);
-}
-
-.coupon-card h4 {
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-    margin-top: 15px;
-}
-
-/* Estilo para la imagen */
 .coupon-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
 }
+
+.coupon-text {
+    color: var(--secondary-color); /* Color del texto del cupón */
+    font-size: 1.5rem; /* Tamaño del texto del cupón */
+    margin-top: 10px; /* Espacio encima del texto */
+    padding: 10px; /* Espacio interno alrededor del texto */
+    border: 2px solid var(--primary-color); /* Borde sólido con color primario */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    display: inline-block; /* Permite que el borde se ajuste al contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+#acceptCoupon {
+    padding: 10px 20px;
+    background: var(--accent-color); /* Color de fondo del botón */
+    border: none;
+    border-radius: 5px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#acceptCoupon:hover {
+    background: #e0d05f; /* Un tono más oscuro del amarillo */
+}
+
 
 /* Estilo para el botón "Aceptar" */
 #acceptCoupon {

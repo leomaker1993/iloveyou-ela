@@ -16,17 +16,29 @@ section {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% ); */
-  background-image: radial-gradient(circle at 10% 20%, rgba(255,107,149,0.8) 0%, rgba(116,182,247,0.8) 90%);
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  justify-content: flex-start; /* Alinea al inicio (arriba) */
+  align-items: center; /* Centra horizontalmente */
+  background-image: radial-gradient(circle at 10% 20%, rgba(255, 107, 149, 0.8) 0%, rgba(116, 182, 247, 0.8) 90%);
   overflow: hidden;
 }
 
+section h1 {
+  padding-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
 .swiper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .swiper-slide {
@@ -219,7 +231,7 @@ https://i.ibb.co/WvT2mPJR/Screenshot-20250213-163628-Instagram-1.jpg
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 40px;
+  bottom: 80px;
 }
 
 .love-button {
